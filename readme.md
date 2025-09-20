@@ -62,16 +62,18 @@ A pixel-perfect, responsive React dashboard application featuring dark/light the
 # 🖥️ Screenshots
 
 ## Light Theme - Dashboard
-![Light Dashboard](https://via.placeholder.com/468x300?text=App+Screenshot+Here)
+![Light Dashboard](./image/light%20theme.jpeg)
 
 ## Dark Theme - Dashboard
-![Dark Dashboard](https://via.placeholder.com/468x300?text=App+Screenshot+Here)
+![Dark Dashboard](./image/dark%20theme.jpeg)
 
 ## Orders Management
-![Orders List ](https://via.placeholder.com/468x300?text=App+Screenshot+Here)
+![Orders List ](./image/order%20list-1.jpeg)
+![Orders List](./image/order%20list-2.jpeg)
 
 ## Mobile Responsive
-![Mobile View](https://via.placeholder.com/468x300?text=App+Screenshot+Here)
+![Mobile View](./image/mobile%20responsive-1.jpeg)
+![Mobile View](./image/mobile%20responsive-2.jpeg)
 
 
 ## 🛠 Tech Stack
@@ -106,8 +108,9 @@ A pixel-perfect, responsive React dashboard application featuring dark/light the
 ### 1-Clone the repository
 
 ### bash
-git clone https://github.com/yourusername/modern-saas-dashboard.git
-cd modern-saas-dashboard
+git clone https://github.com/SunilKumarSharma129/Dashboard.git
+
+cd  Dashboard
 
 ### 2-Open the project
 
