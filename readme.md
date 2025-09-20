@@ -73,7 +73,9 @@ A pixel-perfect, responsive React dashboard application featuring dark/light the
 
 ## Mobile Responsive
 ![Mobile View](./image/mobile%20responsive-1.jpeg)
+![Mobile View](./image/mobile%20responsive-3.jpeg)
 ![Mobile View](./image/mobile%20responsive-2.jpeg)
+![Mobile View](./image/mobile%20responsive-4.jpeg)
 
 ## Notifications
 ![Notification View](./image/notification-1.jpeg)
