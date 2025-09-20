@@ -75,6 +75,10 @@ A pixel-perfect, responsive React dashboard application featuring dark/light the
 ![Mobile View](./image/mobile%20responsive-1.jpeg)
 ![Mobile View](./image/mobile%20responsive-2.jpeg)
 
+## Notifications
+![Notification View](./image/notification-1.jpeg)
+![Notification View](./image/notification-2.jpeg)
+
 
 ## 🛠 Tech Stack
 ### React 18 
