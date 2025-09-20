@@ -111,7 +111,6 @@ cd modern-saas-dashboard
 
 ### 2-Open the project
 
-### bash
 - No build process required - open directly in browser
 - open index.html
 
