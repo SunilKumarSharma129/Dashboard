@@ -166,7 +166,7 @@ cd modern-saas-dashboard
 
 
 
-## Authors
+## Author
 
 - [@SunilKumarSharma129](https://github.com/SunilKumarSharma129)
 
