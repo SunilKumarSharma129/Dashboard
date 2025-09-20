@@ -1,0 +1,440 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Dashboard</title>
+    <link rel="stylesheet" href="style.css" />
+    <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+    <script src="https://unpkg.com/lucide@latest/dist/umd/lucide.js"></script>
+  </head>
+  <body>
+    <div class="app">
+      <!-- Sidebar -->
+      <aside class="sidebar" id="sidebar">
+        <div class="sidebar__header">
+          <div class="sidebar__logo">
+            <div class="logo-icon"></div>
+            <span class="logo-text">Menu </span>
+          </div>
+          <button class="sidebar__toggle" id="sidebarToggle">
+            <i data-lucide="menu"></i>
+          </button>
+        </div>
+
+        <nav class="sidebar__nav">
+          <div class="nav-section">
+            <div class="nav-section__title">Favorites</div>
+            <div class="nav-section__subtitle">Recently</div>
+          </div>
+
+          <div class="nav-section">
+            <ul class="nav-list">
+              <li class="nav-item active">
+                <a href="#" class="nav-link" data-page="dashboard">
+                  <i data-lucide="bar-chart-3"></i>
+                  <span>Overview</span>
+                </a>
+              </li>
+              <li class="nav-item">
+                <a href="#" class="nav-link">
+                  <i data-lucide="folder"></i>
+                  <span>Projects</span>
+                </a>
+              </li>
+            </ul>
+          </div>
+
+          <div class="nav-section">
+            <div class="nav-section__title">Dashboards</div>
+            <ul class="nav-list">
+              <li class="nav-item">
+                <a href="#" class="nav-link">
+                  <span>Default</span>
+                </a>
+              </li>
+              <li class="nav-item">
+                <a href="#" class="nav-link">
+                  <span>eCommerce</span>
+                </a>
+              </li>
+              <li class="nav-item">
+                <a href="#" class="nav-link">
+                  <span>Projects</span>
+                </a>
+              </li>
+              <li class="nav-item">
+                <a href="#" class="nav-link">
+                  <span>Online Courses</span>
+                </a>
+              </li>
+            </ul>
+          </div>
+
+          <div class="nav-section">
+            <div class="nav-section__title">Pages</div>
+            <ul class="nav-list">
+              <li class="nav-item">
+                <a href="#" class="nav-link" data-page="orders">
+                  <i data-lucide="shopping-cart"></i>
+                  <span>Order List</span>
+                </a>
+              </li>
+              <li class="nav-item">
+                <a href="#" class="nav-link">
+                  <i data-lucide="user"></i>
+                  <span>User Profile</span>
+                </a>
+              </li>
+              <li class="nav-item">
+                <a href="#" class="nav-link">
+                  <i data-lucide="building"></i>
+                  <span>Account</span>
+                </a>
+              </li>
+              <li class="nav-item">
+                <a href="#" class="nav-link">
+                  <i data-lucide="briefcase"></i>
+                  <span>Corporate</span>
+                </a>
+              </li>
+              <li class="nav-item">
+                <a href="#" class="nav-link">
+                  <i data-lucide="file-text"></i>
+                  <span>Blog</span>
+                </a>
+              </li>
+              <li class="nav-item">
+                <a href="#" class="nav-link">
+                  <i data-lucide="users"></i>
+                  <span>Social</span>
+                </a>
+              </li>
+            </ul>
+          </div>
+
+          <div class="sidebar__team">
+            <div class="team-members">
+              <div class="team-member">
+                <img
+                  src="https://images.unsplash.com/photo-1755278338891-e8d8481ff087?q=80&w=1974&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D"
+                  alt="Team member"
+                />
+              </div>
+              <div class="team-member">
+                <img
+                  src="https://images.unsplash.com/photo-1507003211169-0a1dd7228f2d?w=32&h=32&fit=crop&crop=face"
+                  alt="Team member"
+                />
+              </div>
+              <div class="team-member">
+                <img
+                  src="https://images.unsplash.com/photo-1472099645785-5658abf4ff4e?w=32&h=32&fit=crop&crop=face"
+                  alt="Team member"
+                />
+              </div>
+            </div>
+          </div>
+        </nav>
+      </aside>
+
+      <!-- Main Content -->
+      <main class="main-content">
+        <!-- Top Navigation -->
+        <header class="top-nav">
+          <div class="top-nav__left">
+            <button class="mobile-menu-toggle" id="mobileMenuToggle">
+              <i data-lucide="menu"></i>
+            </button>
+            <nav class="breadcrumb">
+              <span class="breadcrumb__item">Dashboards</span>
+              <span class="breadcrumb__separator">/</span>
+              <span class="breadcrumb__item current">Default</span>
+            </nav>
+          </div>
+
+          <div class="top-nav__right">
+            <div class="search-bar">
+              <i data-lucide="search"></i>
+              <input type="text" placeholder="Search..." />
+            </div>
+
+            <button class="nav-button" id="notificationBtn">
+              <i data-lucide="bell"></i>
+              <span class="notification-badge">3</span>
+            </button>
+
+            <button class="nav-button" id="themeToggle">
+              <i data-lucide="sun"></i>
+            </button>
+
+            <div class="user-profile">
+              <img
+                src="https://images.unsplash.com/photo-1758220654420-b218b35e63a9?w=900&auto=format&fit=crop&q=60&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwcm9maWxlLXBhZ2V8MXx8fGVufDB8fHx8fA%3D%3D"
+                alt="User"
+              />
+              <span>Sunil Kumar</span>
+              <i data-lucide="chevron-down"></i>
+            </div>
+          </div>
+        </header>
+
+        <!-- Dashboard Page -->
+        <div class="page dashboard-page active" id="dashboardPage">
+          <div class="page-header">
+            <h1>eCommerce</h1>
+          </div>
+
+          <!-- Metrics Cards -->
+          <div class="metrics-grid">
+            <div class="metric-card">
+              <div class="metric-card__header">
+                <span class="metric-title">Customers</span>
+                <i data-lucide="users"></i>
+              </div>
+              <div class="metric-value">3,781</div>
+              <div class="metric-change positive">+11.01%</div>
+            </div>
+
+            <div class="metric-card">
+              <div class="metric-card__header">
+                <span class="metric-title">Orders</span>
+                <i data-lucide="shopping-bag"></i>
+              </div>
+              <div class="metric-value">1,219</div>
+              <div class="metric-change negative">-0.03%</div>
+            </div>
+
+            <div class="metric-card">
+              <div class="metric-card__header">
+                <span class="metric-title">Revenue</span>
+                <i data-lucide="dollar-sign"></i>
+              </div>
+              <div class="metric-value">$695</div>
+              <div class="metric-change positive">+15.03%</div>
+            </div>
+
+            <div class="metric-card">
+              <div class="metric-card__header">
+                <span class="metric-title">Growth</span>
+                <i data-lucide="trending-up"></i>
+              </div>
+              <div class="metric-value">30.1%</div>
+              <div class="metric-change positive">+6.08%</div>
+            </div>
+          </div>
+
+          <!-- Charts Section -->
+          <div class="charts-grid">
+            <div class="chart-card">
+              <div class="chart-header">
+                <h3>Projections vs Actuals</h3>
+              </div>
+              <div
+                class="chart-container"
+                style="position: relative; height: 300px"
+              >
+                <canvas id="projectionsChart"></canvas>
+              </div>
+            </div>
+
+            <div class="chart-card">
+              <div class="chart-header">
+                <h3>Revenue</h3>
+                <div class="revenue-summary">
+                  <div class="revenue-item">
+                    <span class="revenue-label">Current Week</span>
+                    <span class="revenue-value">$58,211</span>
+                  </div>
+                  <div class="revenue-item">
+                    <span class="revenue-label">Previous Week</span>
+                    <span class="revenue-value">$68,768</span>
+                  </div>
+                </div>
+              </div>
+              <div
+                class="chart-container"
+                style="position: relative; height: 300px"
+              >
+                <canvas id="revenueChart"></canvas>
+              </div>
+            </div>
+          </div>
+
+          <!-- Bottom Section -->
+          <div class="bottom-grid">
+            <div class="location-card">
+              <div class="chart-header">
+                <h3>Revenue by Location</h3>
+              </div>
+              <div class="location-list">
+                <div class="location-item">
+                  <span class="location-name">New York</span>
+                  <div class="location-bar">
+                    <div class="location-progress" style="width: 72%"></div>
+                  </div>
+                  <span class="location-percentage">72%</span>
+                </div>
+                <div class="location-item">
+                  <span class="location-name">San Francisco</span>
+                  <div class="location-bar">
+                    <div class="location-progress" style="width: 39%"></div>
+                  </div>
+                  <span class="location-percentage">39%</span>
+                </div>
+                <div class="location-item">
+                  <span class="location-name">Sydney</span>
+                  <div class="location-bar">
+                    <div class="location-progress" style="width: 25%"></div>
+                  </div>
+                  <span class="location-percentage">25%</span>
+                </div>
+                <div class="location-item">
+                  <span class="location-name">Singapore</span>
+                  <div class="location-bar">
+                    <div class="location-progress" style="width: 61%"></div>
+                  </div>
+                  <span class="location-percentage">61%</span>
+                </div>
+              </div>
+            </div>
+
+            <div class="products-card">
+              <div class="chart-header">
+                <h3>Top Selling Products</h3>
+              </div>
+              <div class="products-table">
+                <table>
+                  <thead>
+                    <tr>
+                      <th>Name</th>
+                      <th>Price</th>
+                      <th>Quantity</th>
+                      <th>Amount</th>
+                    </tr>
+                  </thead>
+                  <tbody id="productsTableBody"></tbody>
+                </table>
+              </div>
+            </div>
+
+            <div class="sales-card">
+              <div class="chart-header">
+                <h3>Total Sales</h3>
+              </div>
+              <div
+                class="chart-container"
+                style="position: relative; height: 200px"
+              >
+                <canvas id="salesChart"></canvas>
+              </div>
+              <div class="sales-legend" id="salesLegend"></div>
+            </div>
+          </div>
+        </div>
+
+        <!-- Orders Page -->
+        <div class="page orders-page" id="ordersPage">
+          <div class="page-header">
+            <h1>Order List</h1>
+            <div class="page-actions">
+              <div class="search-bar">
+                <i data-lucide="search"></i>
+                <input
+                  type="text"
+                  placeholder="Search orders..."
+                  id="orderSearch"
+                />
+              </div>
+              <button class="btn btn--primary">
+                <i data-lucide="plus"></i>
+                Add Order
+              </button>
+            </div>
+          </div>
+
+          <div class="orders-table-container">
+            <table class="orders-table">
+              <thead>
+                <tr>
+                  <th class="sortable" data-sort="id">
+                    Order ID
+                    <i data-lucide="chevron-up-down"></i>
+                  </th>
+                  <th>User</th>
+                  <th class="sortable" data-sort="project">
+                    Project
+                    <i data-lucide="chevron-up-down"></i>
+                  </th>
+                  <th>Address</th>
+                  <th class="sortable" data-sort="date">
+                    Date
+                    <i data-lucide="chevron-up-down"></i>
+                  </th>
+                  <th>Status</th>
+                </tr>
+              </thead>
+              <tbody id="ordersTableBody"></tbody>
+            </table>
+          </div>
+
+          <div class="pagination">
+            <button class="pagination-btn" id="prevPage">
+              <i data-lucide="chevron-left"></i>
+              Previous
+            </button>
+            <div class="pagination-info">
+              Page <span id="currentPage">1</span> of
+              <span id="totalPages">1</span>
+            </div>
+            <button class="pagination-btn" id="nextPage">
+              Next
+              <i data-lucide="chevron-right"></i>
+            </button>
+          </div>
+        </div>
+      </main>
+
+      <!-- Right Panel (Notifications) -->
+      <aside class="right-panel" id="rightPanel">
+        <div class="panel-header">
+          <h3>Notifications</h3>
+          <button class="panel-close" id="panelClose">
+            <i data-lucide="x"></i>
+          </button>
+        </div>
+
+        <div class="panel-content">
+          <div class="notification-section">
+            <h4>Bug Reports</h4>
+            <div class="notification-item">
+              <div class="notification-icon error">
+                <i data-lucide="bug"></i>
+              </div>
+              <div class="notification-content">
+                <p>You have a bug that needs attention</p>
+                <span class="notification-time">Just now</span>
+              </div>
+            </div>
+            <div class="notification-item">
+              <div class="notification-icon success">
+                <i data-lucide="user-plus"></i>
+              </div>
+              <div class="notification-content">
+                <p>New user registered</p>
+                <span class="notification-time">59 minutes ago</span>
+              </div>
+            </div>
+          </div>
+
+          <div class="contacts-section">
+            <h4>Contacts</h4>
+            <div class="contacts-list" id="contactsList"></div>
+          </div>
+        </div>
+      </aside>
+    </div>
+
+    <script src="app.js"></script>
+  </body>
+</html>
